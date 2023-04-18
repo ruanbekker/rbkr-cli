@@ -1,6 +1,17 @@
 version: "3"
 
 tasks:
+  default:
+    desc: Runs the help task
+    deps: [help]
+    silent: True
+
+  help:
+    desc: Runs the list tasks
+    cmds:
+      - task --list
+    silent: True
+
   build:
     desc: Build the app
     cmds:
